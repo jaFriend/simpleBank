@@ -155,7 +155,7 @@ class BankGUI:
             account.bank.deposit(amount)
             self.save_bank_accounts()
             self.show_account_page(account)
-        elif amount < 0:
+        elif amount is not None:
             messagebox.showerror(
                 "Error", "Deposit amount must be valid.")
 
